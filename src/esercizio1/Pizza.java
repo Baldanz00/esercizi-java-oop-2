@@ -1,28 +1,32 @@
-public class Pizza {
-    private String ingredienti;
+package esercizio1;
+import java.util.ArrayList;
+import java.util.List;
 
-    public Pizza(String ingredienti) {
-        this.ingredienti = ingredienti;
+public class Pizza {
+    private List<String> ingredienti;
+
+
+    public Pizza() {
+        this.ingredienti = new ArrayList<>();
     }
+
     public Pizza aggiungiMozzarella() {
-        this.ingredienti += ", mozzarella";
+        this.ingredienti.add("mozzarella");
         return this;
     }
+
     public Pizza aggiungiPomodoro() {
-        this.ingredienti += ", pomodoro";
+        this.ingredienti.add("pomodoro");
         return this;
     }
+    
     public Pizza aggiungiProsciutto() {
-        this.ingredienti += ", prosciutto";
+        this.ingredienti.add("prosciutto");
         return this;
     }
 
     @Override
     public String toString() {
-        if(ingredienti.endsWith(", ")) {
-            ingredienti = ingredienti.substring(0, ingredienti.length() - 2);
-        }
-        return "Pizza con ingredienti: " + ingredienti;
+        return "Pizza con ingredienti: " + String.join(", ", ingredienti);
     }
-
 }

@@ -2,12 +2,12 @@ package esercizio1;
 
 public class Main {
     public static void main(String[] args) {
-        Pizza pizza = new Pizza("base");
-        pizza.aggiungiMozzarella()
+        Pizza pizza1 = new Pizza();
+        pizza1.aggiungiMozzarella()
              .aggiungiPomodoro()
              .aggiungiProsciutto();
         
-        System.out.println(pizza);
+        System.out.println(pizza1);
     }
 
 }
